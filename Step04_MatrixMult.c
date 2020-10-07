@@ -42,27 +42,23 @@ int main(void) {
   /* INSERT CODE HERE. */
 	for(i=0; i<XSIZE; i=i+2){
 		for(j=0;j<XSIZE; j=j+2){
-			x[i][j] =0;
-			x[i][j+1] =0;
-			x[i+1][j] =0;
-			x[i+1][j+1] =0;
 	
-			int var1;
-			int var2;
-			int var3;
-			int var4;
+			int var1 = 0;
+			int var2 = 0;
+			int var3 = 0;
+			int var4 = 0;
 
 			for(k=0; k<YSIZE; ++k){
-				var1 = x[i][j] + y[i][k] * z[k][j] ; 
-				var3 = x[i][j+1] + y[i][k] * z[k][j+1] ; 
-				var2 = x[i+1][j] + y[i+1][k] * z[k][j] ; 
-				var4 = x[i+1][j+1] + y[i+1][k] * z[k][j+1] ; 
+				var1 = var1 + y[i][k] * z[k][j] ; 
+				var3 = var3 + y[i][k] * z[k][j+1] ; 
+				var2 = var2 + y[i+1][k] * z[k][j] ; 
+				var4 = var4 + y[i+1][k] * z[k][j+1] ; 
 
-				x[i][j] = var1;
-				x[i+1][j] = var2;
-				x[i][j+1] = var3;
-				x[i+1][j+1] = var4;
 			}
+			x[i][j] = var1;
+			x[i+1][j] = var2;
+			x[i][j+1] = var3;
+			x[i+1][j+1] = var4;
 		}
 	}
 

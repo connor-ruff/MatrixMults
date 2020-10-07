@@ -42,86 +42,64 @@ int main(void) {
   /* INSERT CODE HERE. */
 	for(i=0; i<XSIZE; i=i+4){
 		for(j=0;j<XSIZE; j=j+4){
-			x[i][j] =  0;
-			x[i][j+1] = 0;
-			x[i+1][j] = 0;
-			x[i+1][j+1] = 0;
 
-			x[i][j+2] = 0;
-			x[i][j+3] = 0;
-			x[i+1][j+2] = 0;
-			x[i+1][j+3] = 0;
-
-			x[i+2][j] = 0;
-			x[i+3][j] = 0;
-			x[i+2][j+1] = 0;
-			x[i+3][j+1] = 0;
-
-			x[i+2][j+2] = 0;
-			x[i+3][j+2] = 0;
-			x[i+2][j+3] = 0;
-			x[i+3][j+3] = 0;
-	
-			int var1;
-			int var2;
-			int var3;
-			int var4;
-			int var5;
-			int var6;
-			int var7;
-			int var8;
-			int var9;
-			int var10;
-			int var11;
-			int var12;
-			int var13;
-			int var14;
-			int var15;
-			int var16;
+			int var1 = 0;
+			int var2 = 0;
+			int var3 = 0;
+			int var4 = 0;
+			int var5 = 0;
+			int var6 = 0;
+			int var7 = 0;
+			int var8 = 0;
+			int var9 = 0;
+			int var10 = 0;
+			int var11 = 0;
+			int var12 = 0;
+			int var13 = 0;
+			int var14 = 0;
+			int var15 = 0;
+			int var16 = 0;
 
 			for(k=0; k<YSIZE; ++k){
-				var1 = x[i][j] + y[i][k] * z[k][j] ; 
-				var3 = x[i][j+1] + y[i][k] * z[k][j+1] ; 
-				var2 = x[i+1][j] + y[i+1][k] * z[k][j] ; 
-				var4 = x[i+1][j+1] + y[i+1][k] * z[k][j+1] ;
+				var1 = var1 + y[i][k] * z[k][j] ; 
+				var3 = var3 + y[i][k] * z[k][j+1] ; 
+				var2 = var2 + y[i+1][k] * z[k][j] ; 
+				var4 = var4 + y[i+1][k] * z[k][j+1] ;
 				
 				
-				var5 = x[i][j+2] + y[i][k] * z[k][j+2] ; 
-				var6 = x[i][j+3] + y[i][k] * z[k][j+3] ; 
-				var7 = x[i+1][j+2] + y[i+1][k] * z[k][j+2] ; 
-				var8 = x[i+1][j+3] + y[i+1][k] * z[k][j+3] ; 
+				var5 = var5 + y[i][k] * z[k][j+2] ; 
+				var6 = var6 + y[i][k] * z[k][j+3] ; 
+				var7 = var7 + y[i+1][k] * z[k][j+2] ; 
+				var8 = var8 + y[i+1][k] * z[k][j+3] ; 
 				 
-				var9 = x[i+2][j] + y[i+2][k] * z[k][j] ; 
-				var10 = x[i+3][j] + y[i+3][k] * z[k][j] ; 
-				var11 = x[i+2][j+1] + y[i+2][k] * z[k][j+1] ; 
-				var12 = x[i+3][j+1] + y[i+3][k] * z[k][j+1] ; 
+				var9 = var9 + y[i+2][k] * z[k][j] ; 
+				var10 = var10 + y[i+3][k] * z[k][j] ; 
+				var11 = var11 + y[i+2][k] * z[k][j+1] ; 
+				var12 = var12 + y[i+3][k] * z[k][j+1] ; 
 
-				var13 = x[i+2][j+2] + y[i+2][k] * z[k][j+2] ; 
-				var14 = x[i+3][j+2] + y[i+3][k] * z[k][j+2] ; 
-				var15 = x[i+2][j+3] + y[i+2][k] * z[k][j+3] ; 
-				var16 = x[i+3][j+3] + y[i+3][k] * z[k][j+3] ;
+				var13 = var13 + y[i+2][k] * z[k][j+2] ; 
+				var14 = var14 + y[i+3][k] * z[k][j+2] ; 
+				var15 = var15 + y[i+2][k] * z[k][j+3] ; 
+				var16 = var16 + y[i+3][k] * z[k][j+3] ;
 				 
-				x[i][j] = var1;
-				x[i+1][j] = var2;
-				x[i][j+1] = var3;
-				x[i+1][j+1] = var4;
-
-				x[i][j+2] = var5;
-				x[i][j+3] = var6;
-				x[i+1][j+2] = var7;
-				x[i+1][j+3] = var8;
-
-				x[i+2][j] = var9;
-				x[i+3][j] = var10;
-				x[i+2][j+1] = var11;
-				x[i+3][j+1] = var12;
-			
-				x[i+2][j+2] = var13;
-				x[i+3][j+2] = var14;
-				x[i+2][j+3] = var15;
-				x[i+3][j+3] = var16;
-				
 			}
+			
+			x[i][j] = var1;
+			x[i+1][j] = var2;
+			x[i][j+1] = var3;
+			x[i+1][j+1] = var4;
+			x[i][j+2] = var5;
+			x[i][j+3] = var6;
+			x[i+1][j+2] = var7;
+			x[i+1][j+3] = var8;
+			x[i+2][j] = var9;
+			x[i+3][j] = var10;
+			x[i+2][j+1] = var11;
+			x[i+3][j+1] = var12;
+			x[i+2][j+2] = var13;
+			x[i+3][j+2] = var14;
+			x[i+2][j+3] = var15;
+			x[i+3][j+3] = var16;
 		}
 	}
 
